@@ -11,7 +11,7 @@
     <div id="resposta"></div>
 
     <script>
-        function some(vetor, avaliar) {
+        function every(vetor, avaliar) {
             let cont = 0;
             for (let i = 0; i < vetor.length; i++) {
                 if (avaliar(vetor[i])) {
@@ -28,11 +28,11 @@
         let vet = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
         document.getElementById("resposta").innerHTML = vet;
 
-        document.getElementById("resposta").innerHTML += '<br/> Pares: ' + some(vet, (x) => x % 2 === 0);
-        document.getElementById("resposta").innerHTML += '<br/> Ímpares: ' + some(vet, (x) => x % 2 !== 0);
-        document.getElementById("resposta").innerHTML += '<br/> Negativos: ' + some(vet, (x) => x < 0);
-        document.getElementById("resposta").innerHTML += '<br/> Maior que 0: ' + some(vet, (x) => x > 0);
-        document.getElementById("resposta").innerHTML += '<br/> Maior que 10: ' + some(vet, (x) => x > 10);
+        document.getElementById("resposta").innerHTML += '<br/> Pares: ' + every(vet, (x) => x % 2 === 0);
+        document.getElementById("resposta").innerHTML += '<br/> Ímpares: ' + every(vet, (x) => x % 2 !== 0);
+        document.getElementById("resposta").innerHTML += '<br/> Negativos: ' + every(vet, (x) => x < 0);
+        document.getElementById("resposta").innerHTML += '<br/> Maior ou igual a 0: ' + every(vet, (x) => x >= 0);
+        document.getElementById("resposta").innerHTML += '<br/> Maior que 10: ' + every(vet, (x) => x > 10);
     </script>
 </body>
 
