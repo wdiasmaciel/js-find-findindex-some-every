@@ -28,9 +28,11 @@
 
         let valor = 6;
         document.getElementById("resposta").innerHTML += '<br/> Procurando: ' + valor;
-        let resp = find(vet, valor);
+        document.getElementById("resposta").innerHTML += '<br/> Encontrou: ' + find(vet, valor);
 
-        document.getElementById("resposta").innerHTML += '<br/> Retorno: ' +  resp;
+        valor = 10;
+        document.getElementById("resposta").innerHTML += '<br/> Procurando: ' + valor;
+        document.getElementById("resposta").innerHTML += '<br/> Encontrou: ' + find(vet, valor);
     </script>
 </body>
 
