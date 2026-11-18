@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo</title>
+</head>
+
+<body>
+    <div id="resposta"></div>
+
+    <script>
+        function some(vetor, avaliar) {
+            for (let i = 0; i < vetor.length; i++) {
+                if (avaliar(vetor[i])) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        let vet = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        document.getElementById("resposta").innerHTML = vet;
+
+        document.getElementById("resposta").innerHTML += '<br/> Pares: ' + some(vet, (x) => x % 2 === 0);
+        document.getElementById("resposta").innerHTML += '<br/> Ímpares: ' + some(vet, (x) => x % 2 !== 0);
+        document.getElementById("resposta").innerHTML += '<br/> Pares: ' + some(vet, (x) => x < 0);
+    </script>
+</body>
+
+</html>
