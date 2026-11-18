@@ -26,9 +26,11 @@
 
         let valor = 6;
         document.getElementById("resposta").innerHTML += '<br/> Procurando: ' + valor;
-        let resp = findIndex(vet, valor);
+        document.getElementById("resposta").innerHTML += '<br/> Índice: ' + findIndex(vet, valor);
 
-        document.getElementById("resposta").innerHTML += '<br/> Índice: ' + resp;
+        valor = 10;
+        document.getElementById("resposta").innerHTML += '<br/> Procurando: ' + valor;
+        document.getElementById("resposta").innerHTML += '<br/> Índice: ' + findIndex(vet, valor);
     </script>
 </body>
 
