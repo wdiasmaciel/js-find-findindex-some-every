@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo</title>
+</head>
+
+<body>
+    <div id="resposta"></div>
+
+    <script>
+        function findIndex(vetor, x, avaliar) {
+            let indice = -1;
+
+            for (let i = 0; i < vetor.length; i++)
+                if (avaliar(vetor[i], x))
+                    indice = i;
+
+            return indice;
+        }
+
+        let vet = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
+        document.getElementById("resposta").innerHTML = vet;
+
+        let valor = 6;
+        document.getElementById("resposta").innerHTML += '<br/> Procurando: ' + valor;
+        document.getElementById("resposta").innerHTML += '<br/> Índice: ' + findIndex(vet, valor, (elemento, valorProcurado) => elemento === valorProcurado);
+
+        valor = 10;
+        document.getElementById("resposta").innerHTML += '<br/> Procurando: ' + valor;
+        document.getElementById("resposta").innerHTML += '<br/> Índice: ' + findIndex(vet, valor, (elemento, valorProcurado) => elemento === valorProcurado);
+    </script>
+</body>
+
+</html>
